@@ -1,9 +1,9 @@
-# Eat Log - 智能饮食记录应用
+# Eato - 智能饮食记录应用
 
 一个专注于饮食记录的 Web 应用，支持拍照记录每日饮食，帮助你养成健康的饮食习惯。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg)](https://github.com/sifan077/EatLog/releases/tag/v0.0.1)
+[![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg)](https://github.com/sifan077/Eato/releases/tag/v0.0.1)
 
 ## ✨ 功能特点
 
