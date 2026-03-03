@@ -44,7 +44,7 @@ export default function LoginPage() {
             <span className="text-4xl sm:text-5xl">🍽️</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-2">
-            Eat Log
+            Eato
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">
             记录每一餐，享受生活
@@ -141,7 +141,7 @@ export default function LoginPage() {
 
         {/* Footer */}
         <p className="mt-8 text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400">
-          © 2026 Eat Log. 用心记录每一餐
+          © 2026 Eato. 用心记录每一餐
         </p>
       </div>
     </div>

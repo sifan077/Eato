@@ -50,7 +50,7 @@ export default function Navbar() {
           >
             <span className="text-2xl">🍽️</span>
             <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
-              Eat Log
+              Eato
             </h1>
           </Link>
 

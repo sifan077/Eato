@@ -107,7 +107,7 @@ pnpm dev
 ## 📁 项目结构
 
 ```
-eat-log/
+/
 ├── src/
 │   ├── app/                      # Next.js App Router 目录
 │   │   ├── layout.tsx           # 根布局组件

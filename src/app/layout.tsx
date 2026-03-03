@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Eat Log - 饮食记录',
+  title: 'Eato - 饮食记录',
   description: '记录每一餐，享受生活',
 };
 
