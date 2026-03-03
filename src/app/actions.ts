@@ -462,7 +462,10 @@ export async function getTotalPriceStats(): Promise<{
   const todayStart = getStartOfDay();
   const todayEnd = getEndOfDay();
   const weekStart = getStartOfDay(new Date(Date.now() - 7 * 24 * 60 * 60 * 1000));
-  const monthStart = getStartOfDay(new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+
+  // Get the first day of current month for monthly stats
+  const now = new Date();
+  const monthStart = getStartOfDay(new Date(now.getFullYear(), now.getMonth(), 1));
 
   // Get today's meal logs
   const { data: todayLogs } = await supabase
@@ -481,7 +484,7 @@ export async function getTotalPriceStats(): Promise<{
 
   const weekTotal = (weekLogs || []).reduce((sum, meal) => sum + (meal.price || 0), 0);
 
-  // Get month's meal logs
+  // Get month's meal logs (from the 1st of current month)
   const { data: monthLogs } = await supabase
     .from('meal_logs')
     .select('price')
@@ -489,10 +492,9 @@ export async function getTotalPriceStats(): Promise<{
 
   const monthTotal = (monthLogs || []).reduce((sum, meal) => sum + (meal.price || 0), 0);
 
-  // Calculate average daily for the current month
-  const now = new Date();
-  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-  const averageDaily = monthTotal / daysInMonth;
+  // Calculate average daily: from the 1st of current month to today
+  const daysPassedThisMonth = now.getDate();
+  const averageDaily = monthTotal / daysPassedThisMonth;
 
   return {
     todayTotal,
