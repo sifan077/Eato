@@ -71,16 +71,10 @@ export function detectMealType(hour?: number): string {
   if (h >= MEAL_TIME_RANGES.lunch.start && h <= MEAL_TIME_RANGES.lunch.end) {
     return 'lunch';
   }
-  if (h >= MEAL_TIME_RANGES.afternoon_snack.start && h <= MEAL_TIME_RANGES.afternoon_snack.end) {
-    return 'afternoon_snack';
-  }
   if (h >= MEAL_TIME_RANGES.dinner.start && h <= MEAL_TIME_RANGES.dinner.end) {
     return 'dinner';
   }
-  if (h >= MEAL_TIME_RANGES.evening_snack.start || h <= MEAL_TIME_RANGES.evening_snack.end) {
-    return 'evening_snack';
-  }
-  return 'snack'; // Default to snack for any other time
+  return 'lunch'; // Default to lunch for any other time
 }
 
 // Format date for display in Beijing Time (e.g., "2026年1月3日")

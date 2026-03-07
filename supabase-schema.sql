@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS public.meal_logs (
 
   -- Meal type constraint
   CONSTRAINT check_meal_type
-    CHECK (meal_type IN ('breakfast', 'lunch', 'dinner', 'afternoon_snack', 'evening_snack', 'snack')),
+    CHECK (meal_type IN ('breakfast', 'lunch', 'dinner', 'snack')),
   CONSTRAINT check_photo_paths_not_empty
     CHECK (array_length(photo_paths, 1) > 0)
 );

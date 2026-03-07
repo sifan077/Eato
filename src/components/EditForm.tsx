@@ -405,8 +405,8 @@ export default function EditForm({
         <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
           餐次
         </label>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-3">
-          {MEAL_TYPES.map((type) => (
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+          {MEAL_TYPES.filter((type) => type.value !== 'snack').map((type) => (
             <button
               key={type.value}
               type="button"

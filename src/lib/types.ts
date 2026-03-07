@@ -13,13 +13,7 @@ export interface MealLog {
   updated_at: string;
 }
 
-export type MealType =
-  | 'breakfast'
-  | 'lunch'
-  | 'dinner'
-  | 'afternoon_snack'
-  | 'evening_snack'
-  | 'snack';
+export type MealType = 'breakfast' | 'lunch' | 'dinner' | 'snack';
 
 export interface MealLogInput {
   photo_paths: string[];

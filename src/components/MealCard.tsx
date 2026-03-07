@@ -14,7 +14,10 @@ interface MealCardProps {
 
 export default function MealCard({ meal, photoUrls, returnUrl }: MealCardProps) {
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
-  const mealType = MEAL_TYPES.find((t) => t.value === meal.meal_type);
+  const mealType = MEAL_TYPES.find((t) => t.value === meal.meal_type) || {
+    emoji: '🍽️',
+    label: '其他',
+  };
 
   const handleImageError = (index: number) => {
     setImageErrors((prev) => new Set([...prev, index]));

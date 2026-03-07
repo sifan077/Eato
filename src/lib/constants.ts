@@ -2,9 +2,7 @@
 export const MEAL_TYPES = [
   { value: 'breakfast', label: '早餐', emoji: '🌅' },
   { value: 'lunch', label: '午餐', emoji: '🍜' },
-  { value: 'afternoon_snack', label: '下午加餐', emoji: '☕' },
   { value: 'dinner', label: '晚餐', emoji: '🍽️' },
-  { value: 'evening_snack', label: '晚上加餐', emoji: '🌙' },
   { value: 'snack', label: '今日总结', emoji: '📊' },
 ] as const;
 
@@ -38,11 +36,9 @@ export const STORAGE_PATH_FORMAT = '{user_id}/{timestamp}_{random}.jpg';
 
 // Time Ranges for Meal Types (for auto-detection)
 export const MEAL_TIME_RANGES = {
-  breakfast: { start: 5, end: 8 }, // 5:00 - 8:59
-  lunch: { start: 9, end: 13 }, // 9:00 - 13:59
-  afternoon_snack: { start: 14, end: 16 }, // 14:00 - 16:59
-  dinner: { start: 17, end: 20 }, // 17:00 - 20:59
-  evening_snack: { start: 21, end: 4 }, // 21:00 - 4:59 (next day)
+  breakfast: { start: 5, end: 9 }, // 5:00 - 9:59
+  lunch: { start: 10, end: 14 }, // 10:00 - 14:59
+  dinner: { start: 15, end: 22 }, // 15:00 - 22:59
   snack: { start: 0, end: 23 }, // All day
 } as const;
 
